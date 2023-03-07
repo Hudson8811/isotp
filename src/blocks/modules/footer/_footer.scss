@@ -1,0 +1,288 @@
+.footer {
+    background-color: $blue-f1;
+    
+    &-text {
+        display: block;
+        font-weight: 600;
+        font-size: 20px;
+        line-height: 130%;
+        
+        @include max(xl) {
+            text-align: center;
+        }
+        @include max(md) {
+            font-size: 16px;
+            line-height: 180%;
+        }
+    }
+
+    &__container {
+        max-width: 1500px;
+        padding: 56px 75px;
+        margin: 0 auto;
+
+        @include max(md) {
+            padding: 15px 16px;
+        }
+    }
+
+    &__wrap {
+        max-width: 1260px;
+    }
+
+    &__top {
+        display: flex;
+        align-items: center;
+
+        @include max(xl) {
+            flex-direction: column;
+        }
+    }
+
+    &__logo {
+        flex-shrink: 0;
+        margin-right: auto;
+        
+        @include max(xl) {
+            margin-right: 0;
+            margin-bottom: 16px;
+        }
+
+        svg {
+            display: block;
+            width: 151px;
+            height: 69px;
+            margin-right: 50px;
+        
+            @include max(xl) {
+                margin-right: 0;
+            }
+            @include max(md) {
+                width: 184px;
+                height: 85px;
+            }
+        }
+    }
+
+    &__contact {
+        max-width: 1106px;
+        width: 100%;
+        list-style: none;
+        display: flex;
+        justify-content: space-between;
+        align-items: flex-start;
+        margin-left: -20px;
+        
+        @include max(xl) {
+            margin-top: -6px;
+            margin-left: 0;
+            margin-bottom: -6px;
+        }
+        @include max(sm) {
+            flex-direction: column;
+            align-items: center;
+        }
+        
+        &-item {
+            margin-left: 20px;
+            
+            @include max(xl) {
+                max-width: 33%;
+                width: 100%;
+                display: flex;
+                flex-direction: column;
+                align-items: center;
+                margin-top: 6px;
+                margin-left: 0;
+                margin-bottom: 6px;
+            }
+            @include max(sm) {
+                max-width: 100%;
+            }
+            
+            .footer__contact-value:not(:first-of-type) {
+                position: relative;
+                margin-left: 20px;
+                
+                @include max(xl) {
+                    margin-left: 0;
+                }
+                @include max(xl) {
+                    margin-left: 12px;
+                }
+
+                &:before {
+                    content: '';
+                    position: absolute;
+                    top: 50%;
+                    left: -12px;
+                    transform: translate(0, -50%);
+                    width: 4px;
+                    height: 4px;
+                    background-color: $blue-tr-03;
+                    border-radius: 50%;
+
+                    @include max(xl) {
+                        content: none;
+                    }
+                    @include max(sm) {
+                        content: '';
+                        left: -8px;
+                    }
+                }
+            }
+        }
+
+        &-block {
+            display: flex;
+            align-items: center;
+
+            @include max(xl) {
+                flex-direction: column;
+            }
+            @include max(sm) {
+                flex-direction: row;
+            }
+
+            .footer__contact-value {
+                flex-shrink: 0;
+            }
+        }
+
+        &-value {
+            @include max(xl) {
+                text-align: center;
+            }
+        }
+    }
+
+    &__menu {
+        display: flex;
+        flex-wrap: wrap;
+        align-items: center;
+        justify-content: space-between;
+        list-style: none;
+        border-top: 1px solid $blue-tr-03;
+        border-bottom: 1px solid $blue-tr-03;
+        padding: 14px 32px;
+        margin: 56px -20px 32px;
+        
+        @include max(lg) {
+            justify-content: space-around;
+        }
+        @include max(md) {
+            padding: 10px 60px;
+            margin: 16px 0;
+        }
+        @include max(xs) {
+            flex-direction: column;
+            justify-content: center;
+            padding: 16px 0;
+        }
+
+        &-item {
+            margin-top: 6px;
+            margin-left: 10px;
+            margin-right: 10px;
+            margin-bottom: 6px;
+
+            @include max(md) {
+                &:not(:last-child) {
+                    margin-right: 10px;
+                }
+            }
+        }
+    }
+
+    &__question {
+        display: flex;
+        align-items: center;
+        background-color: $white;
+        border-radius: 32px;
+        padding: 32px 48px;
+        margin-bottom: 32px;
+        
+        @include max(md) {
+            flex-direction: column;
+            padding: 24px;
+            margin-bottom: 16px;
+        }
+
+        &-title {
+            margin-bottom: 4px;
+        }
+
+        &-text {
+            margin-right: 16px;
+            
+            @include max(md) {
+                margin-right: 0;
+                margin-bottom: 16px;
+                text-align: center;
+            }
+            @include max(sm) {
+                text-align: left;
+            }
+        }
+
+        &-form {
+            max-width: 780px;
+            width: 100%;
+            display: flex;
+            align-items: center;
+            
+            @include max(md) {
+                max-width: 100%;
+            }
+            @include max(sm) {
+                flex-direction: column;
+            }
+        }
+
+        &-submit,
+        &-label {
+            max-width: 252px;
+            width: 100%;
+            
+            @include max(md) {
+                max-width: 100%;
+            }
+        }
+        
+        &-label {
+            margin-right: 12px;
+            
+            @include max(sm) {
+                margin-right: 0;
+                margin-bottom: 12px;
+            }
+        }
+        
+        &-submit {
+            flex-shrink: 0;
+            
+            @include max(md) {
+                flex-shrink: 1;
+                min-width: 221.33px;
+            }
+        }
+    }
+
+    &__info {
+        display: flex;
+        align-items: center;
+
+        @include max(md) {
+            flex-direction: column;
+        }
+
+        p:last-child {
+            margin-left: 24px;
+            
+            @include max(md) {
+                margin-top: 4px;
+                margin-left: 0;
+            }
+        }
+    }
+}

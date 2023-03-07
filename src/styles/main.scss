@@ -1,0 +1,22 @@
+// Переменные, миксины, функции
+@use 'sass:math';
+@import "helpers/variables";
+@import "helpers/mixins";
+@import "helpers/functions";
+
+// CSS-файлы библиотек
+@import "vendor/libs";
+
+// Основное
+@import "base/fonts";
+@import "base/general";
+@import "base/ui-kit";
+
+// БЭМ-блоки
+@import "../blocks/modules/modules";
+
+// Компоненты
+@import "../blocks/components/components";
+
+// Стили целых страниц без разбития на модули
+@import "pages/main";

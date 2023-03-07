@@ -1,0 +1,11 @@
+.main-page {
+    overflow: hidden;
+    
+    @include max(md) {
+        padding-top: 64px;
+    }
+    
+    .section__banner {
+        background-color: $blue-2a;
+    }
+}

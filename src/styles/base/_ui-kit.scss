@@ -1,0 +1,390 @@
+$white: #FFFFFF;
+$white-tr-01: rgba(255, 255, 255, 0.1);
+$white-tr-03: rgba(255, 255, 255, 0.3);
+$white-tr-07: rgba(255, 255, 255, 0.7);
+$black: #000000;
+$black-15: #151625;
+$grey-51: #515364;
+$grey-c6: #C6C6C6;
+$grey-c2: #C2C2C2;
+$grey-f1: #F1F3F8;
+$grey-f0: #E0E0E0;
+$blue-4c: #4C70B5;
+$blue-2a: #2A4882;
+$blue-f1: #F1F5FA;
+$blue-f1f4: #F1F4FA;
+$blue-tr-03: rgba(76, 112, 181, 0.3);
+$red-e1: #E1004A;
+$red-d4: #D44D60;
+$animation: all 0.5s ease;
+
+body {
+  background: $white;
+  font-family: $textFont;
+  font-style: normal;
+}
+
+ul {
+  list-style: none;
+}
+
+p {
+  margin: 0;
+}
+
+img {
+  display: block;
+}
+
+.no-scroll {
+  height: 100%;
+  overflow: hidden;
+}
+
+.btn {
+  outline: none;
+  transition: $animation;
+  cursor: pointer;
+
+  &-blank-blue {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background-color: transparent;
+    border: none;
+    padding: 0;
+
+    &:hover p {
+      color: $blue-2a;
+    }
+  }
+  &-tr-blue,
+  &-tr-white,
+  &-tr-grey,
+  &-red,
+  &-blue {
+    height: 53px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border-radius: 16px;
+    padding: 12px 0;
+  }
+  &-tr-blue {
+    background-color: transparent;
+    border: 1px solid $blue-tr-03;
+
+    &:hover {
+      border-color: $blue-2a;
+
+      p {
+        color: $blue-2a;
+      }
+    }
+  }
+  &-tr-white {
+    background-color: transparent;
+    border: 1px solid $white-tr-03;
+
+    &:hover {
+      border-color: $white;
+    }
+  }
+  &-tr-grey {
+    background-color: transparent;
+    border: 1px solid $grey-f0;
+
+    &:hover {
+      border-color: $blue-4c;
+
+      p {
+        color: $blue-4c;
+      }
+    }
+  }
+
+  &-red {
+    background-color: $red-e1;
+    border: none;
+    
+    &:hover {
+      background-color: $red-d4;
+    }
+  }
+  &-blue {
+    background-color: $blue-4c;
+    border: none;
+    
+    &:hover {
+      background-color: $blue-2a;
+    }
+  }
+}
+
+.link {
+  text-decoration: none;
+}
+
+.title {
+  &-desc,
+  &-mob {
+    &-1 {
+      font-weight: 600;
+      font-size: 40px;
+      line-height: 120%;
+  
+      @include max(md) {
+        font-size: 22px;
+      }
+    }
+    &-2 {
+      font-weight: 700;
+      font-size: 32px;
+      line-height: 130%;
+  
+      @include max(md) {
+        font-size: 20px;
+      }
+    }
+    &-3 {
+      font-weight: 600;
+      font-size: 24px;
+      line-height: 150%;
+  
+      @include max(md) {
+        font-weight: 700;
+        font-size: 18px;
+        line-height: 140%;
+      }
+    }
+    &-4 {
+      font-weight: 600;
+      font-size: 20px;
+      line-height: 150%;
+    }
+  }
+  &-mob {
+    &-1 {
+      @include max(md) {
+        font-size: 22px;
+      }
+    }
+    &-2 {
+      @include max(md) {
+        font-size: 20px;
+      }
+    }
+    &-3 {
+      @include max(md) {
+        font-weight: 700;
+        font-size: 18px;
+        line-height: 140%;
+      }
+    }
+    &-4 {
+      @include max(md) {
+        font-size: 16px;
+        line-height: 120%;
+      }
+    }
+  }
+}
+
+.text {
+
+  &-desc,
+  &-mob {
+    &-1,
+    &-2 {
+      font-size: 16px;
+    }
+    &-1 {
+      font-weight: 500;
+      line-height: 160%;
+    }
+    &-2 {
+      font-weight: 700;
+      line-height: 180%;
+    }
+    &-3 {
+      font-weight: 600;
+      font-size: 14px;
+      line-height: 19px;
+    }
+  }
+
+  &-mob {
+    @include max(md) {
+      &-1 {
+        font-size: 14px;
+      }
+      &-2 {
+        font-size: 14px;
+        line-height: 150%;
+      }
+      &-3 {
+        font-size: 12px;
+        line-height: 16px;
+      }
+    }
+  }
+}
+
+.color {
+  &-white,
+  &-black,
+  &-blue {
+    transition: $animation;
+  }
+  &-white {
+    color: $white;
+  }
+  &-white-07 {
+    color: $white-tr-07;
+  }
+  &-black {
+    color: $black-15;
+  }
+  &-white.hover:hover,
+  &-black.hover:hover {
+    color: $blue-4c;
+    cursor: pointer;
+  }
+  &-blue {
+    color: $blue-4c;
+    
+    &.hover:hover {
+      color: $blue-2a;
+      cursor: pointer;
+    }
+  }
+  &-dark-blue {
+    color: $blue-2a;
+  }
+  &-grey {
+    color: $grey-51;
+  }
+  &-red {
+    color: $red-e1;
+  }
+}
+
+.form {
+  &-label {
+    height: 53px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    background-color: transparent;
+    border: 1px solid $blue-tr-03;
+    border-radius: 16px;
+    padding: 12px 16px;
+    transition: $animation;
+    
+    &:hover {
+      border-color: $blue-2a;
+    }
+  }
+
+  &-input {
+    max-width: 100%;
+    width: 100%;
+    outline: none;
+    border: none;
+    background-color: transparent;
+    padding: 0;
+
+    &::placeholder {
+      color: $grey-c2;
+    }
+  }
+
+  &-checkbox {
+    position: relative;
+    display: flex;
+
+    input {
+      position: absolute;
+      z-index: -999;
+      overflow: hidden;
+      visibility: hidden;
+      opacity: 0;
+    }
+
+    &-checkmark {
+      position: absolute;
+      top: 2px;
+      left: 0;
+      width: 16px;
+      height: 16px;
+      background-color: $white;
+      border: 1px solid $blue-tr-03;
+      border-radius: 4px;
+      cursor: pointer;
+      margin-right: 8px;
+    }
+
+    input:checked ~ .form-checkbox-checkmark {
+      background-color: green;
+    }
+
+    p {
+      padding-left: 24px;
+    }
+  }
+}
+
+.section {
+  &__title {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    max-width: 1500px;
+    width: 100%;
+    margin-bottom: 48px;
+    
+    @include max(md) {
+      margin-bottom: 24px;
+    }
+    @include max(sm) {
+      margin-bottom: 16px;
+    }
+  }
+
+  &__container {
+    max-width: 1500px;
+    padding: 96px 120px;
+    margin: 0 auto;
+    
+    @include max(md) {
+      padding: 32px 40px;
+    }
+    @include max(sm) {
+      padding: 32px 16px;
+    }
+
+    &-right {
+      max-width: 1500px;
+      padding: 96px 0 96px 120px;
+      margin: 0 auto;
+      
+      @include max(md) {
+        padding: 48px 0 48px 40px;
+      }
+      @include max(sm) {
+        padding: 32px 0 32px 16px;
+      }
+
+      .section__title {
+        padding-right: 120px;
+      
+        @include max(md) {
+          padding-right: 40px;
+        }
+        @include max(sm) {
+          padding-right: 16px;
+        }
+      }
+    }
+  }
+}
