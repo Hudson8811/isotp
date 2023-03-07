@@ -2136,13 +2136,13 @@ img {
     position: fixed;
     z-index: 100;
     width: 100%;
-    overflow-y: auto;
     background-color: #FFFFFF;
   }
 
   .header.active {
     height: 100%;
     display: flex;
+    overflow-y: auto;
     flex-direction: column;
   }
 
