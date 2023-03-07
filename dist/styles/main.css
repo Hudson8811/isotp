@@ -762,6 +762,10 @@ img {
   padding-right: 120px;
 }
 
+.header {
+  overflow: hidden;
+}
+
 .header__mobile {
   position: relative;
   z-index: 10;
@@ -2189,16 +2193,18 @@ img {
     display: none;
   }
 
+  .header__contact {
+    width: 100%;
+    order: 3;
+    padding-top: 15px;
+  }
+
   .header__contact-tel,
   .header__contact-mail,
   .header__contact-schedule {
     font-weight: 500;
     font-size: 16px;
     line-height: 160%;
-  }
-
-  .header__contact-schedule {
-    margin-top: 8px;
   }
 
   .header__search {
@@ -2569,12 +2575,10 @@ img {
   }
 
   .header__contact {
-    order: 3;
     width: 100%;
     flex-direction: column;
     align-items: flex-start;
     margin-right: 0;
-    margin-top: auto;
   }
 
   .header__contact-mail {
@@ -2584,6 +2588,10 @@ img {
 
   .header__contact-mail:before {
     content: none;
+  }
+
+  .header__contact-schedule {
+    margin-top: 8px;
   }
 
   .header__menu {
