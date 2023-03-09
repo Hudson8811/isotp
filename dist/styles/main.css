@@ -1171,7 +1171,7 @@ img {
 
 .footer__container {
   max-width: 1500px;
-  padding: 56px 150px;
+  padding: 56px 120px;
   margin: 0 auto;
 }
 
@@ -1199,7 +1199,7 @@ img {
   display: flex;
   justify-content: space-between;
   align-items: flex-start;
-  margin-left: -20px;
+  margin-left: 22px;
 }
 
 .footer__contact-item {
@@ -1223,6 +1223,11 @@ img {
   border-radius: 50%;
 }
 
+.footer__contact-type {
+  display: block;
+  margin-bottom: 6px;
+}
+
 .footer__contact-block {
   display: flex;
   align-items: center;
@@ -1240,8 +1245,8 @@ img {
   list-style: none;
   border-top: 1px solid rgba(76, 112, 181, 0.3);
   border-bottom: 1px solid rgba(76, 112, 181, 0.3);
-  padding: 14px 32px;
-  margin: 56px -20px 32px;
+  padding: 12px 22px;
+  margin: 56px 0px 32px;
 }
 
 .footer__menu-item {

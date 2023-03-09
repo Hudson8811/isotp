@@ -18,7 +18,7 @@
 
     &__container {
         max-width: 1500px;
-        padding: 56px 150px;
+        padding: 56px 120px;
         margin: 0 auto;
 
         @include max(md) {
@@ -67,7 +67,7 @@
         display: flex;
         justify-content: space-between;
         align-items: flex-start;
-        margin-left: -20px;
+        margin-left: 22px;
         
         @include max(xl) {
             margin-top: -6px;
@@ -129,6 +129,11 @@
             }
         }
 
+        &-type {
+            display: block;
+            margin-bottom: 6px;
+        }
+
         &-block {
             display: flex;
             align-items: center;
@@ -160,8 +165,8 @@
         list-style: none;
         border-top: 1px solid $blue-tr-03;
         border-bottom: 1px solid $blue-tr-03;
-        padding: 14px 32px;
-        margin: 56px -20px 32px;
+        padding: 12px 22px;
+        margin: 56px 0px 32px;
         
         @include max(lg) {
             justify-content: space-around;
