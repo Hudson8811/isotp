@@ -55,3 +55,42 @@ footer.footer
             .footer__info
                 p.text-desc-3.color-black © ООО “Студия Исток-Пром”, 2018- 2022
                 p.text-desc-3.color-black Политика конфиденциальности
+
+    .popup
+        .popup__order.popup-order
+            button(type='button').popup__close
+                <svg width="40" height="40" viewBox="0 0 40 40" fill="none" xmlns="http://www.w3.org/2000/svg">
+                    <path d="M30 10L10 30" stroke="white" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+                    <path d="M10 10L30 30" stroke="white" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+                </svg>
+
+            .popup-order__fill#js-popup-order-fill
+                .popup-order__title.title-mob-2.color-black Закажите вышивку<br>в «Студии Исток-Пром»
+                .popup-order__text.text-mob-1.color-grey Оставьте заявку, и мы свяжемся с вами в рабочее время — c 9.00 до 7.00
+
+                form.popup-order__form
+                    .popup-order__wrap
+                        label(for='popup-order-input-name').popup-order__label.form-label
+                            input(type='text' id='popup-order-input-name' placeholder='Имя' required).popup-order__input.form-input.text-desc-2
+                        label(for='popup-order-input-tel').popup-order__label.form-label
+                            input(type='text' id='popup-order-input-tel' placeholder='Телефон' required).popup-order__input.form-input.text-desc-2
+                        label(for='popup-order-input-mail').popup-order__label.form-label
+                            input(type='text' id='popup-order-input-mail' placeholder='Email' required).popup-order__input.form-input.text-desc-2
+                        label(for='popup-order-input-textarea').popup-order__label.form-label--textarea
+                            textarea(id='popup-order-input-textarea' placeholder='Текст сообщения' required).popup-order__input.form-input.text-desc-2
+                        
+                        label(for='popup-order-input-checkbox').popup-order__checkbox.form-checkbox
+                            input(type='checkbox' id='popup-order-input-checkbox' required)
+                            span.form-checkbox-checkmark
+                            p.popup-order__checkbox-text.form-checkbox-text.text-mob-3.color-grey Согласен с условиями 
+                                a(href='#').link.color-blue пользовательского соглашения
+
+                        button(type='submit').popup-order__submit.link.btn.btn-red#js-popup-order-submit
+                            p.text-mob-2.color-white Оставить заявку
+                    
+            .popup-order__send#js-popup-order-send
+                .popup-order__title.title-mob-2.color-black Спасибо!
+                .popup-order__text.text-mob-1.color-grey Данные успешно отправлены
+
+                button(type='submit').popup-order__submit.link.btn.btn-red#js-popup-order-back
+                    p.text-mob-2.color-white Вернуться назад

@@ -79,13 +79,51 @@ $(document).ready(function (){
     }
 
     if($('#js-form-submit')) {
-        $('#js-form-submit').on('click', () => {
-            $('#js-form-fill').css('display', 'none');
-            $('#js-form-send').css('display', 'flex');
+        
+        $('#js-form-submit').on('click', (e) => {
+            const form = e.target.closest('form');
+            const formFill = form.closest('#js-form-fill');
+            const formSend = $(formFill).next('#js-form-send');
+            
+            $(formFill).css('display', 'none');
+            $(formSend).css('display', 'flex');
         });
-        $('#js-form-back').on('click', () => {
-            $('#js-form-fill').css('display', 'block');
-            $('#js-form-send').css('display', 'none');
+        $('#js-form-back').on('click', (e) => {
+            const formSend = e.target.closest('#js-form-send');
+            const formFill = $(formSend).prev('#js-form-fill');
+            
+            $(formFill).css('display', 'block');
+            $(formSend).css('display', 'none');
+        });
+    }
+
+    if($('.popup')) {
+        $('.js-popup-order-open').on('click', () => {
+            $('body').toggleClass('no-scroll');
+            $('.popup').toggleClass('active');
+            $('.popup-order').toggleClass('active');
+        });
+        $('.popup__close').on('click', () => {
+            $('body').toggleClass('no-scroll');
+            $('.popup').toggleClass('active');
+            $('.popup-order').toggleClass('active');
+        });
+
+        $('#js-popup-order-submit').on('click', (e) => {
+            const form = e.target.closest('form');
+            const formFill = form.closest('#js-popup-order-fill');
+            console.log(formFill);
+            const formSend = $(formFill).next('#js-popup-order-send');
+            
+            $(formFill).css('display', 'none');
+            $(formSend).css('display', 'flex');
+        });
+        $('#js-popup-order-back').on('click', (e) => {
+            const formSend = e.target.closest('#js-popup-order-send');
+            const formFill = $(formSend).prev('#js-popup-order-fill');
+            
+            $(formFill).css('display', 'block');
+            $(formSend).css('display', 'none');
         });
     }
     

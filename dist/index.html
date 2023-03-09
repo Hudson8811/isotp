@@ -219,6 +219,49 @@
           </div>
         </div>
       </div>
+      <div class="popup">
+        <div class="popup__order popup-order">
+          <button class="popup__close" type="button"><svg width="40" height="40" viewBox="0 0 40 40" fill="none" xmlns="http://www.w3.org/2000/svg">
+<path d="M30 10L10 30" stroke="white" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+<path d="M10 10L30 30" stroke="white" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+</svg>
+          </button>
+          <div class="popup-order__fill" id="js-popup-order-fill">
+            <div class="popup-order__title title-mob-2 color-black">Закажите вышивку<br>в «Студии Исток-Пром»</div>
+            <div class="popup-order__text text-mob-1 color-grey">Оставьте заявку, и мы свяжемся с вами в рабочее время — c 9.00 до 7.00</div>
+            <form class="popup-order__form">
+              <div class="popup-order__wrap">
+                <label class="popup-order__label form-label" for="popup-order-input-name">
+                  <input class="popup-order__input form-input text-desc-2" type="text" id="popup-order-input-name" placeholder="Имя" required>
+                </label>
+                <label class="popup-order__label form-label" for="popup-order-input-tel">
+                  <input class="popup-order__input form-input text-desc-2" type="text" id="popup-order-input-tel" placeholder="Телефон" required>
+                </label>
+                <label class="popup-order__label form-label" for="popup-order-input-mail">
+                  <input class="popup-order__input form-input text-desc-2" type="text" id="popup-order-input-mail" placeholder="Email" required>
+                </label>
+                <label class="popup-order__label form-label--textarea" for="popup-order-input-textarea">
+                  <textarea class="popup-order__input form-input text-desc-2" id="popup-order-input-textarea" placeholder="Текст сообщения" required></textarea>
+                </label>
+                <label class="popup-order__checkbox form-checkbox" for="popup-order-input-checkbox">
+                  <input type="checkbox" id="popup-order-input-checkbox" required><span class="form-checkbox-checkmark"></span>
+                  <p class="popup-order__checkbox-text form-checkbox-text text-mob-3 color-grey">Согласен с условиями <a class="link color-blue" href="#">пользовательского соглашения</a></p>
+                </label>
+                <button class="popup-order__submit link btn btn-red" type="submit" id="js-popup-order-submit">
+                  <p class="text-mob-2 color-white">Оставить заявку</p>
+                </button>
+              </div>
+            </form>
+          </div>
+          <div class="popup-order__send" id="js-popup-order-send">
+            <div class="popup-order__title title-mob-2 color-black">Спасибо!</div>
+            <div class="popup-order__text text-mob-1 color-grey">Данные успешно отправлены</div>
+            <button class="popup-order__submit link btn btn-red" type="submit" id="js-popup-order-back">
+              <p class="text-mob-2 color-white">Вернуться назад</p>
+            </button>
+          </div>
+        </div>
+      </div>
     </footer>
     <script src="js/vendor.js"></script>
     <script src="js/main.js"></script>
