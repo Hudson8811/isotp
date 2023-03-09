@@ -457,6 +457,12 @@ body {
   font-family: "Ruda", sans-serif;
 }
 
+* {
+  box-sizing: border-box;
+  -ms-overflow-style: none;
+  scrollbar-width: none;
+}
+
 body {
   background: #FFFFFF;
   font-family: "Manrope", sans-serif;
