@@ -1961,6 +1961,7 @@ img {
 
 .worksheet__wrap {
   display: flex;
+  align-items: center;
   background-color: #F1F4FA;
   border-radius: 48px;
   padding: 24px;
@@ -1977,7 +1978,7 @@ img {
   margin-bottom: 20px;
 }
 
-.worksheet .info-form {
+.worksheet .info-form__wrap {
   display: flex;
   flex-wrap: wrap;
   justify-content: space-between;
@@ -2026,6 +2027,14 @@ img {
 
 .js-text-more {
   display: none;
+}
+
+#js-form-send {
+  display: none;
+  max-width: 695px;
+  width: 100%;
+  flex-direction: column;
+  align-items: center;
 }
 
 .main-page {
@@ -2595,7 +2604,7 @@ img {
     margin-bottom: 8px;
   }
 
-  .worksheet .info-form {
+  .worksheet .info-form__wrap {
     padding-top: 16px;
     margin-top: -3px;
   }

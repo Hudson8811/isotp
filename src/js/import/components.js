@@ -78,11 +78,16 @@ $(document).ready(function (){
         });
     }
 
-    // if($('.embroidery')) {
-    //     $('.header__order').on('click', () => {
-
-    //     });
-    // }
+    if($('#js-form-submit')) {
+        $('#js-form-submit').on('click', () => {
+            $('#js-form-fill').css('display', 'none');
+            $('#js-form-send').css('display', 'flex');
+        });
+        $('#js-form-back').on('click', () => {
+            $('#js-form-fill').css('display', 'block');
+            $('#js-form-send').css('display', 'none');
+        });
+    }
     
     AOS.init();
 });

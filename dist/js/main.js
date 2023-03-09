@@ -79,13 +79,16 @@ jquery__WEBPACK_IMPORTED_MODULE_0___default()(document).ready(function () {
       }
     });
   }
-
-  // if($('.embroidery')) {
-  //     $('.header__order').on('click', () => {
-
-  //     });
-  // }
-
+  if (jquery__WEBPACK_IMPORTED_MODULE_0___default()('#js-form-submit')) {
+    jquery__WEBPACK_IMPORTED_MODULE_0___default()('#js-form-submit').on('click', function () {
+      jquery__WEBPACK_IMPORTED_MODULE_0___default()('#js-form-fill').css('display', 'none');
+      jquery__WEBPACK_IMPORTED_MODULE_0___default()('#js-form-send').css('display', 'flex');
+    });
+    jquery__WEBPACK_IMPORTED_MODULE_0___default()('#js-form-back').on('click', function () {
+      jquery__WEBPACK_IMPORTED_MODULE_0___default()('#js-form-fill').css('display', 'block');
+      jquery__WEBPACK_IMPORTED_MODULE_0___default()('#js-form-send').css('display', 'none');
+    });
+  }
   AOS.init();
 });
 if (document.querySelector('.banner')) {

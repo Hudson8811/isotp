@@ -760,26 +760,35 @@ block content
 		section.section.section__worksheet
 			.worksheet.section__container
 				.worksheet__wrap
-					.worksheet__info.info
+					.worksheet__info.info#js-form-fill
 						.info__title.title-mob-2.color-black Закажите вышивку<br>в «Студии Исток-Пром»
 						.info__text.text-mob-1.color-grey Оставьте заявку, и мы свяжемся с вами в рабочее время — c 9.00 до 7.00
 
-						.info__form.info-form
-							label(for='info-form-input-name').info-form__label.form-label
-								input(type='text' id='info-form-input-name' placeholder='Имя').info-form__input.form-input.text-desc-2
-							label(for='info-form-input-tel').info-form__label.info-form__label-half.form-label
-								input(type='text' id='info-form-input-tel' placeholder='Телефон').info-form__input.form-input.text-desc-2
-							label(for='info-form-input-mail').info-form__label.info-form__label-half.form-label
-								input(type='text' id='info-form-input-mail' placeholder='Email').info-form__input.form-input.text-desc-2
-							
-							label(for='info-form-input-checkbox').info-form__checkbox.form-checkbox
-								input(type='checkbox' id='info-form-input-checkbox')
-								span.form-checkbox-checkmark
-								p.info-form__checkbox-text.form-checkbox-text.text-mob-3.color-grey Согласен с условиями 
-									a(href='#').link.color-blue пользовательского соглашения
+						form.info__form.info-form
+							.info-form__wrap
+								label(for='info-form-input-name').info-form__label.form-label
+									input(type='text' id='info-form-input-name' placeholder='Имя' required).info-form__input.form-input.text-desc-2
+								label(for='info-form-input-tel').info-form__label.info-form__label-half.form-label
+									input(type='text' id='info-form-input-tel' placeholder='Телефон' required).info-form__input.form-input.text-desc-2
+								label(for='info-form-input-mail').info-form__label.info-form__label-half.form-label
+									input(type='text' id='info-form-input-mail' placeholder='Email' required).info-form__input.form-input.text-desc-2
+								
+								label(for='info-form-input-checkbox').info-form__checkbox.form-checkbox
+									input(type='checkbox' id='info-form-input-checkbox' required)
+									span.form-checkbox-checkmark
+									p.info-form__checkbox-text.form-checkbox-text.text-mob-3.color-grey Согласен с условиями 
+										a(href='#').link.color-blue пользовательского соглашения
 
-							button(type='submit').info-form__submit.link.btn.btn-red
-								p.text-mob-2.color-white Оставить заявку
+								button(type='submit').info-form__submit.link.btn.btn-red#js-form-submit
+									p.text-mob-2.color-white Оставить заявку
+							
+					.info.info-form__send#js-form-send
+						.info__title.title-mob-2.color-black Спасибо!
+						.info__text.text-mob-1.color-grey Данные успешно отправлены
+
+						button(type='submit').info-form__submit.link.btn.btn-red#js-form-back
+							p.text-mob-2.color-white Вернуться назад
+
 					
 					.worksheet__img
 						img(src="./img/picture/worksheet-1.png", alt="")
