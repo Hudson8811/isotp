@@ -459,8 +459,6 @@ body {
 
 * {
   box-sizing: border-box;
-  -ms-overflow-style: none;
-  scrollbar-width: none;
 }
 
 body {
@@ -2652,7 +2650,10 @@ img {
   }
 
   .banner__img img {
-    max-width: 100%;
+    max-width: 121%;
+    margin-left: -15px;
+    margin-top: 14px;
+    margin-bottom: -64px;
   }
 
   .banner__links {
