@@ -1159,6 +1159,7 @@ img {
 }
 
 .footer {
+  border-top: 1px solid rgba(76, 112, 181, 0.3);
   background-color: #F1F5FA;
 }
 
