@@ -1175,10 +1175,6 @@ img {
   margin: 0 auto;
 }
 
-.footer__wrap {
-  max-width: 1260px;
-}
-
 .footer__top {
   display: flex;
   align-items: center;
