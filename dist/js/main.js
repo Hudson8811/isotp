@@ -79,6 +79,13 @@ jquery__WEBPACK_IMPORTED_MODULE_0___default()(document).ready(function () {
       }
     });
   }
+
+  // if($('.embroidery')) {
+  //     $('.header__order').on('click', () => {
+
+  //     });
+  // }
+
   AOS.init();
 });
 if (document.querySelector('.banner')) {

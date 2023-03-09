@@ -454,7 +454,9 @@ ul {
 }
 
 body {
-  font-family: "Ruda", sans-serif;
+  font-family: "Manrope", sans-serif;
+  font-style: normal;
+  overflow-x: hidden;
 }
 
 * {
@@ -463,8 +465,6 @@ body {
 
 body {
   background: #FFFFFF;
-  font-family: "Manrope", sans-serif;
-  font-style: normal;
 }
 
 ul {
@@ -629,7 +629,8 @@ img {
 
 .color-white,
 .color-black,
-.color-blue {
+.color-blue,
+.color-grey {
   transition: all 0.5s ease;
 }
 
@@ -666,6 +667,10 @@ img {
 
 .color-grey {
   color: #515364;
+}
+
+.color-grey.hover:hover {
+  color: #4C70B5;
 }
 
 .color-red {
@@ -761,7 +766,7 @@ img {
 }
 
 .header {
-  overflow: hidden;
+  position: relative;
 }
 
 .header__mobile {
@@ -847,6 +852,7 @@ img {
 }
 
 .header__top .header__container {
+  position: relative;
   display: flex;
   align-items: center;
   justify-content: space-between;
@@ -878,7 +884,18 @@ img {
   margin-left: 56px;
 }
 
+.header__nav-item {
+  background-color: transparent;
+  border: none;
+  padding: 0;
+}
+
+.header__nav-item:hover .embroidery {
+  display: flex;
+}
+
 .header__bottom {
+  position: relative;
   background-color: #FFFFFF;
 }
 
@@ -1044,6 +1061,67 @@ img {
 .header__menu-item {
   border-bottom: 1px solid rgba(76, 112, 181, 0.3);
   padding: 16px 0;
+}
+
+.embroidery {
+  display: none;
+  position: absolute;
+  z-index: 10;
+  top: 362%;
+  right: 0;
+  align-items: flex-start;
+  background-color: #FFFFFF;
+  max-width: fit-content;
+  padding: 32px 34px 32px 33px;
+  margin-left: auto;
+}
+
+.embroidery::before {
+  content: "";
+  position: absolute;
+  z-index: 11;
+  top: -16.6%;
+  right: 0;
+  max-width: 100%;
+  width: 100%;
+  height: 130px;
+  background-color: transparent;
+}
+
+.embroidery:hover {
+  display: flex;
+}
+
+.embroidery__column {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  margin: -28px 0 -10px;
+}
+
+.embroidery__column:not(:first-child) {
+  margin-left: 40px;
+}
+
+.embroidery__item-title,
+.embroidery__item-text {
+  text-align: left;
+}
+
+.embroidery__item-title {
+  padding: 28px 0 10px;
+}
+
+.embroidery__item-title:not(:first-child) {
+  padding: 21.5px 0 10px;
+}
+
+.embroidery__item-text {
+  padding: 6px 0 6.5px;
+}
+
+.embroidery__item-text:last-child {
+  padding: 6px 0 9px;
 }
 
 .footer {
@@ -1679,6 +1757,7 @@ img {
 
 .workers__worker {
   margin-top: 32px;
+  overflow: visible;
 }
 
 .workers__worker .slick-track {
@@ -2131,16 +2210,17 @@ img {
   }
 
   .header {
+    overflow: hidden;
     position: fixed;
     z-index: 100;
     width: 100%;
-    overflow-y: auto;
     background-color: #FFFFFF;
   }
 
   .header.active {
     height: 100%;
     display: flex;
+    overflow-y: auto;
     flex-direction: column;
   }
 
@@ -2182,6 +2262,10 @@ img {
     display: none;
   }
 
+  .header__nav-item:hover .embroidery {
+    display: none;
+  }
+
   .header__bottom .header__container {
     flex-direction: column;
     height: 100%;
@@ -2220,6 +2304,10 @@ img {
   .header__menu {
     display: flex;
     order: 2;
+  }
+
+  .embroidery {
+    display: none;
   }
 
   .footer-text {

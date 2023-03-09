@@ -1,16 +1,17 @@
 .header {
-    overflow: hidden;
-
+    position: relative;
+    
     @include max(md) {
+        overflow: hidden;
         position: fixed;
         z-index: 100;
         width: 100%;
-        overflow-y: auto;
         background-color: $white;
-
+        
         &.active {
             height: 100%;
             display: flex;
+            overflow-y: auto;
             flex-direction: column;
         }
     }
@@ -129,6 +130,7 @@
         }
         
         .header__container {
+            position: relative;
             display: flex;
             align-items: center;
             justify-content: space-between;
@@ -171,9 +173,24 @@
         @include max(md) {
             display: none;
         }
+
+        &-item {
+            background-color: transparent;
+            border: none;
+            padding: 0;
+            
+            &:hover .embroidery {
+                display: flex;
+                
+                @include max(md) {
+                    display: none;
+                }
+            }
+        }
     }
 
     &__bottom {
+        position: relative;
         background-color: $white;
             
         @include max(sm) {
@@ -414,6 +431,71 @@
         &-item {
             border-bottom: 1px solid $blue-tr-03;
             padding: 16px 0;
+        }
+    }
+}
+
+.embroidery {
+    display: none;
+    position: absolute;
+    z-index: 10;
+    top: 362%;
+    right: 0;
+    align-items: flex-start;
+    background-color: $white;
+    max-width: fit-content;
+    padding: 32px 34px 32px 33px;
+    margin-left: auto;
+            
+    &::before {
+        content: '';
+        position: absolute;
+        z-index: 11;
+        top: -16.6%;
+        right: 0;
+        max-width: 100%;
+        width: 100%;
+        height: 130px;
+        background-color: transparent;
+    }
+
+    &:hover {
+        display: flex;
+    }
+
+    @include max(md) {
+        display: none;
+    }
+
+    &__column {
+        display: flex;
+        flex-direction: column;
+        align-items: flex-start;
+        margin: -28px 0 -10px;
+    }
+
+    &__column:not(:first-child) {
+        margin-left: 40px;
+    }
+
+    &__item-title,
+    &__item-text {
+        text-align: left;
+    }
+    
+    &__item-title {
+        padding: 28px 0 10px;
+        
+        &:not(:first-child) {
+            padding: 21.5px 0 10px;
+        }
+    }
+
+    &__item-text {
+        padding: 6px 0 6.5px;
+
+        &:last-child {
+            padding: 6px 0 9px;
         }
     }
 }

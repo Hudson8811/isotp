@@ -77,6 +77,12 @@ $(document).ready(function (){
             }
         });
     }
+
+    // if($('.embroidery')) {
+    //     $('.header__order').on('click', () => {
+
+    //     });
+    // }
     
     AOS.init();
 });
