@@ -77,7 +77,6 @@ $(document).ready(function (){
             }
         });
     }
-
     if($('#js-form-submit')) {
         
         $('#js-form-submit').on('click', (e) => {
@@ -96,7 +95,6 @@ $(document).ready(function (){
             $(formSend).css('display', 'none');
         });
     }
-
     if($('.popup')) {
         $('.js-popup-order-open').on('click', () => {
             $('body').toggleClass('no-scroll');
@@ -126,7 +124,62 @@ $(document).ready(function (){
             $(formSend).css('display', 'none');
         });
     }
-    
+    if('.advantages__number') {
+        var number0 = $('.advantages__number > span:eq(0)');
+        var number1 = $('.advantages__number > span:eq(1)');
+        var number2 = $('.advantages__number > span:eq(2)');
+        var number3 = $('.advantages__number > span:eq(3)');
+
+        var numbersTop = number0.offset().top;
+
+        var start0 = number0.html();
+        var start1 = number1.html();
+        var start2 = number2.html();
+        var start3 = number3.html();
+
+        var end0 = number0.attr('data-max');
+        var end1 = number1.attr('data-max');
+        var end2 = number2.attr('data-max');
+        var end3 = number3.attr('data-max');
+
+
+        function checkNumbers(){
+            if(($(window).scrollTop() > numbersTop-730) && ($(window).scrollTop() < numbersTop+50)){
+                clearInterval(intervalNumbers);
+                var interval0 = setInterval(function() {
+                    number0.html(++start0);
+                    if(start0 == end0) {
+                        clearInterval(interval0);
+                    }
+                }, 125);
+
+                var interval1 = setInterval(function() {
+                    number1.html(++start1);
+                    if(start1 == end1) {
+                        clearInterval(interval1);
+                    }
+                }, 300);
+
+                var interval2 = setInterval(function() {
+                    number2.html(++start2);
+                    if(start2 == end2) {
+                        clearInterval(interval2);
+                    }
+                }, 5);
+
+                var interval3 = setInterval(function() {
+                    number3.html(++start3);
+                    if(start3 == end3) {
+                        clearInterval(interval3);
+                    }
+                }, 125);
+            }
+        }
+
+        var intervalNumbers = setInterval(checkNumbers, 200);
+
+    }
+
     AOS.init();
 });
 if (document.querySelector('.banner')) {

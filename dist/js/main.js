@@ -120,6 +120,51 @@ jquery__WEBPACK_IMPORTED_MODULE_0___default()(document).ready(function () {
       jquery__WEBPACK_IMPORTED_MODULE_0___default()(formSend).css('display', 'none');
     });
   }
+  if (true) {
+    var checkNumbers = function checkNumbers() {
+      if (jquery__WEBPACK_IMPORTED_MODULE_0___default()(window).scrollTop() > numbersTop - 730 && jquery__WEBPACK_IMPORTED_MODULE_0___default()(window).scrollTop() < numbersTop + 50) {
+        clearInterval(intervalNumbers);
+        var interval0 = setInterval(function () {
+          number0.html(++start0);
+          if (start0 == end0) {
+            clearInterval(interval0);
+          }
+        }, 125);
+        var interval1 = setInterval(function () {
+          number1.html(++start1);
+          if (start1 == end1) {
+            clearInterval(interval1);
+          }
+        }, 300);
+        var interval2 = setInterval(function () {
+          number2.html(++start2);
+          if (start2 == end2) {
+            clearInterval(interval2);
+          }
+        }, 5);
+        var interval3 = setInterval(function () {
+          number3.html(++start3);
+          if (start3 == end3) {
+            clearInterval(interval3);
+          }
+        }, 125);
+      }
+    };
+    var number0 = jquery__WEBPACK_IMPORTED_MODULE_0___default()('.advantages__number > span:eq(0)');
+    var number1 = jquery__WEBPACK_IMPORTED_MODULE_0___default()('.advantages__number > span:eq(1)');
+    var number2 = jquery__WEBPACK_IMPORTED_MODULE_0___default()('.advantages__number > span:eq(2)');
+    var number3 = jquery__WEBPACK_IMPORTED_MODULE_0___default()('.advantages__number > span:eq(3)');
+    var numbersTop = number0.offset().top;
+    var start0 = number0.html();
+    var start1 = number1.html();
+    var start2 = number2.html();
+    var start3 = number3.html();
+    var end0 = number0.attr('data-max');
+    var end1 = number1.attr('data-max');
+    var end2 = number2.attr('data-max');
+    var end3 = number3.attr('data-max');
+    var intervalNumbers = setInterval(checkNumbers, 200);
+  }
   AOS.init();
 });
 if (document.querySelector('.banner')) {
