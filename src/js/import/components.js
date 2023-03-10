@@ -361,6 +361,10 @@ if(document.querySelector('.examples__list')) {
             nextEl: '.examples__arrow-next',
             prevEl: '.examples__arrow-prev',
         },
+        speed: 700,
+        autoplay: {
+            delay: 3000,
+        },
     });
     const swiperImg = new Swiper('.item__img', {
         direction: 'horizontal',

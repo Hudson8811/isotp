@@ -340,6 +340,10 @@ if (document.querySelector('.examples__list')) {
     navigation: {
       nextEl: '.examples__arrow-next',
       prevEl: '.examples__arrow-prev'
+    },
+    speed: 700,
+    autoplay: {
+      delay: 3000
     }
   });
   var swiperImg = new Swiper('.item__img', {
