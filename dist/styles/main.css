@@ -2993,6 +2993,8 @@ img {
 
   .examples__pagination {
     max-width: 100%;
+    position: relative;
+    top: -86px;
   }
 
   .clients {
