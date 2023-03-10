@@ -365,14 +365,8 @@ if(document.querySelector('.examples__list')) {
         autoplay: {
             delay: 3000,
         },
-    });
-    const swiperImg = new Swiper('.item__img', {
-        direction: 'horizontal',
-        loop: false,
-        slidesPerView: 1,
-        spaceBetween: 8,
         pagination: {
-            el: ".item__wrap .swiper-pagination",
+            el: ".examples__pagination-wrap",
             clickable: true,
         },
     });

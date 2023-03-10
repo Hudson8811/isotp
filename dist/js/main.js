@@ -344,15 +344,9 @@ if (document.querySelector('.examples__list')) {
     speed: 700,
     autoplay: {
       delay: 3000
-    }
-  });
-  var swiperImg = new Swiper('.item__img', {
-    direction: 'horizontal',
-    loop: false,
-    slidesPerView: 1,
-    spaceBetween: 8,
+    },
     pagination: {
-      el: ".item__wrap .swiper-pagination",
+      el: ".examples__pagination-wrap",
       clickable: true
     }
   });

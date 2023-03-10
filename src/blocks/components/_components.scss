@@ -546,27 +546,6 @@
                     border-radius: 16px;
                 }
             }
-
-            .swiper-pagination {
-                bottom: -2px;
-                
-                @include max(sm) {
-                    bottom: -4px;
-                }
-            }
-
-            .swiper-pagination-bullet {
-                width: 6px;
-                height: 6px;
-                background-color: $blue-4c;
-                opacity: .3;
-                transition: $animation;
-                
-                &.swiper-pagination-bullet-active {
-                    background-color: $blue-2a;
-                    opacity: 1;
-                }
-            }
         }
 
         &__img-name {
@@ -791,6 +770,41 @@
             stroke: $blue-2a;
         }
     }
+
+    &__pagination {
+        max-width: calc(100% - 540px);
+        width: 100%;
+        bottom: -2px;
+        
+        @media only screen and (max-width: 1360px) {
+            max-width: calc(100% - 402px);
+        }
+        @include max(md) {
+            max-width: calc(100% - 235px);
+        }
+        @include max(sm) {
+            max-width: 100%;
+        }
+
+        &-wrap {
+            display: flex;
+            justify-content: center;
+        }
+        
+        .swiper-pagination-bullet {
+            width: 6px;
+            height: 6px;
+            background-color: $blue-4c;
+            opacity: .3;
+            transition: $animation;
+            
+            &.swiper-pagination-bullet-active {
+                background-color: $blue-2a;
+                opacity: 1;
+            }
+        }
+    }
+
 }
 
 .workers {
