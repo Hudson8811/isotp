@@ -144,7 +144,7 @@ $(document).ready(function (){
 
 
         function checkNumbers(){
-            if(($(window).scrollTop() > numbersTop-730) && ($(window).scrollTop() < numbersTop+50)){
+            if(($(window).scrollTop() > numbersTop-900) && ($(window).scrollTop() < numbersTop+50)){
                 clearInterval(intervalNumbers);
                 var interval0 = setInterval(function() {
                     number0.html(++start0);

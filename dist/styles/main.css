@@ -1059,11 +1059,11 @@ img {
   outline: none;
 }
 
-.header__menu button svg {
+.header__menu button img {
   transition: all 0.5s ease;
 }
 
-.header__menu button.open svg {
+.header__menu button.open img {
   transform: rotate(180deg);
 }
 
@@ -1186,7 +1186,7 @@ img {
   margin-right: auto;
 }
 
-.footer__logo svg {
+.footer__logo img {
   display: block;
   width: 151px;
   height: 69px;
@@ -2165,7 +2165,7 @@ img {
     margin-bottom: 16px;
   }
 
-  .footer__logo svg {
+  .footer__logo img {
     margin-right: 0;
   }
 
@@ -2438,7 +2438,7 @@ img {
     padding: 15px 16px;
   }
 
-  .footer__logo svg {
+  .footer__logo img {
     width: 184px;
     height: 85px;
   }

@@ -122,7 +122,7 @@ jquery__WEBPACK_IMPORTED_MODULE_0___default()(document).ready(function () {
   }
   if (true) {
     var checkNumbers = function checkNumbers() {
-      if (jquery__WEBPACK_IMPORTED_MODULE_0___default()(window).scrollTop() > numbersTop - 730 && jquery__WEBPACK_IMPORTED_MODULE_0___default()(window).scrollTop() < numbersTop + 50) {
+      if (jquery__WEBPACK_IMPORTED_MODULE_0___default()(window).scrollTop() > numbersTop - 900 && jquery__WEBPACK_IMPORTED_MODULE_0___default()(window).scrollTop() < numbersTop + 50) {
         clearInterval(intervalNumbers);
         var interval0 = setInterval(function () {
           number0.html(++start0);

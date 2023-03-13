@@ -392,12 +392,12 @@
             background-color: transparent;
             outline: none;
             
-            svg {
+            img {
                 transition: $animation;
             }
 
             &.open {
-                svg {
+                img {
                     transform: rotate(180deg);
                 }
 
