@@ -403,17 +403,11 @@ img {
 }
 
 .popup {
-  &.active::before {
-    content: '';
-    position: fixed;
-    z-index: 50;
-    top: 0;
-    left: 0;
-    right: 0;
-    bottom: 0;
-    background-color: $blue-tr-03;
-  }
-
+	&.active {
+		.popup__overlay {
+			display: block;
+		}
+	}
   &__close {
     position: absolute;
     right: -30px;
@@ -426,4 +420,14 @@ img {
     height: 40px;
     cursor: pointer;
   }
+	&__overlay {
+		position: fixed;
+		display: none;
+		z-index: 50;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background-color: $blue-tr-03;
+	}
 }

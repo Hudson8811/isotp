@@ -775,15 +775,8 @@ img {
   padding-right: 120px;
 }
 
-.popup.active::before {
-  content: "";
-  position: fixed;
-  z-index: 50;
-  top: 0;
-  left: 0;
-  right: 0;
-  bottom: 0;
-  background-color: rgba(76, 112, 181, 0.3);
+.popup.active .popup__overlay {
+  display: block;
 }
 
 .popup__close {
@@ -797,6 +790,17 @@ img {
   width: 40px;
   height: 40px;
   cursor: pointer;
+}
+
+.popup__overlay {
+  position: fixed;
+  display: none;
+  z-index: 50;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background-color: rgba(76, 112, 181, 0.3);
 }
 
 .header {

@@ -107,6 +107,7 @@ $(document).ready(function (){
             $('.popup-order').toggleClass('active');
         });
 
+
         $('#js-popup-order-submit').on('click', (e) => {
             const form = e.target.closest('form');
             const formFill = form.closest('#js-popup-order-fill');
@@ -124,6 +125,11 @@ $(document).ready(function (){
             $(formSend).css('display', 'none');
         });
     }
+		$('.popup__overlay').on('click', () => {
+			$('body').toggleClass('no-scroll');
+			$('.popup').toggleClass('active');
+			$('.popup-order').toggleClass('active');
+	});
     if('.advantages__number') {
         var number0 = $('.advantages__number > span:eq(0)');
         var number1 = $('.advantages__number > span:eq(1)');
@@ -180,6 +186,8 @@ $(document).ready(function (){
 
     }
 
+	
+	
     AOS.init();
 });
 if (document.querySelector('.banner')) {

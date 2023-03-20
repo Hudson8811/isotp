@@ -120,6 +120,11 @@ jquery__WEBPACK_IMPORTED_MODULE_0___default()(document).ready(function () {
       jquery__WEBPACK_IMPORTED_MODULE_0___default()(formSend).css('display', 'none');
     });
   }
+  jquery__WEBPACK_IMPORTED_MODULE_0___default()('.popup__overlay').on('click', function () {
+    jquery__WEBPACK_IMPORTED_MODULE_0___default()('body').toggleClass('no-scroll');
+    jquery__WEBPACK_IMPORTED_MODULE_0___default()('.popup').toggleClass('active');
+    jquery__WEBPACK_IMPORTED_MODULE_0___default()('.popup-order').toggleClass('active');
+  });
   if (true) {
     var checkNumbers = function checkNumbers() {
       if (jquery__WEBPACK_IMPORTED_MODULE_0___default()(window).scrollTop() > numbersTop - 900 && jquery__WEBPACK_IMPORTED_MODULE_0___default()(window).scrollTop() < numbersTop + 50) {
