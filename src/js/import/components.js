@@ -52,10 +52,11 @@ $(document).ready(function (){
             $(this).toggleClass('open');
         });
 
-        $('.header__search').on('click', function() {
-            if(!$(this).hasClass('active')) {
-                $(this).addClass('active');
-            }
+        $('.header__search-svg').click(function(event) {
+					event.preventDefault();
+					$(".header__search").addClass('active')
+					$(this).addClass('noActive');
+					$(".header__search-button").addClass('active')
         });
     }
     if($('.js-text-btn')) {

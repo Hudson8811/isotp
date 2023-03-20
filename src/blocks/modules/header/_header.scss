@@ -311,7 +311,21 @@
         &-svg {
             width: 20px;
             height: 20px;
-            
+            &.noActive {
+							display: none;
+						}
+            svg {
+                stroke: $blue-4c;
+                transition: $animation;
+            }
+        }
+        &-button{
+            width: 20px;
+            height: 20px;
+						display: none;
+            &.active {
+							display: inline-block;
+						}
             svg {
                 stroke: $blue-4c;
                 transition: $animation;

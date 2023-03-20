@@ -55,10 +55,11 @@ jquery__WEBPACK_IMPORTED_MODULE_0___default()(document).ready(function () {
     jquery__WEBPACK_IMPORTED_MODULE_0___default()('button.header__menu-item').on('click', function () {
       jquery__WEBPACK_IMPORTED_MODULE_0___default()(this).toggleClass('open');
     });
-    jquery__WEBPACK_IMPORTED_MODULE_0___default()('.header__search').on('click', function () {
-      if (!jquery__WEBPACK_IMPORTED_MODULE_0___default()(this).hasClass('active')) {
-        jquery__WEBPACK_IMPORTED_MODULE_0___default()(this).addClass('active');
-      }
+    jquery__WEBPACK_IMPORTED_MODULE_0___default()('.header__search-svg').click(function (event) {
+      event.preventDefault();
+      jquery__WEBPACK_IMPORTED_MODULE_0___default()(".header__search").addClass('active');
+      jquery__WEBPACK_IMPORTED_MODULE_0___default()(this).addClass('noActive');
+      jquery__WEBPACK_IMPORTED_MODULE_0___default()(".header__search-button").addClass('active');
     });
   }
   if (jquery__WEBPACK_IMPORTED_MODULE_0___default()('.js-text-btn')) {

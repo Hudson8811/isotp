@@ -1000,7 +1000,26 @@ img {
   height: 20px;
 }
 
+.header__search-svg.noActive {
+  display: none;
+}
+
 .header__search-svg svg {
+  stroke: #4C70B5;
+  transition: all 0.5s ease;
+}
+
+.header__search-button {
+  width: 20px;
+  height: 20px;
+  display: none;
+}
+
+.header__search-button.active {
+  display: inline-block;
+}
+
+.header__search-button svg {
   stroke: #4C70B5;
   transition: all 0.5s ease;
 }
