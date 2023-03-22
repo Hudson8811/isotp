@@ -61,6 +61,15 @@ jquery__WEBPACK_IMPORTED_MODULE_0___default()(document).ready(function () {
       jquery__WEBPACK_IMPORTED_MODULE_0___default()(this).addClass('noActive');
       jquery__WEBPACK_IMPORTED_MODULE_0___default()(".header__search-button").addClass('active');
     });
+    jquery__WEBPACK_IMPORTED_MODULE_0___default()(document).click(function (e) {
+      if (jquery__WEBPACK_IMPORTED_MODULE_0___default()(e.target).closest(".header__search").length) {
+        return;
+      }
+      jquery__WEBPACK_IMPORTED_MODULE_0___default()(".header__search").removeClass('active');
+      jquery__WEBPACK_IMPORTED_MODULE_0___default()(".header__search-svg").removeClass('noActive');
+      console.log(".removeClass");
+      jquery__WEBPACK_IMPORTED_MODULE_0___default()(".header__search-button").removeClass('active');
+    });
   }
   if (jquery__WEBPACK_IMPORTED_MODULE_0___default()('.js-text-btn')) {
     jquery__WEBPACK_IMPORTED_MODULE_0___default()('.js-text-btn').on('click', function (event) {

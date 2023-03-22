@@ -58,6 +58,15 @@ $(document).ready(function (){
 					$(this).addClass('noActive');
 					$(".header__search-button").addClass('active')
         });
+				$(document).click(function (e) {
+					if ($(e.target).closest(".header__search").length) {
+							return;
+					}
+					$(".header__search").removeClass('active')
+					$(".header__search-svg").removeClass('noActive')
+					console.log(".removeClass")
+					$(".header__search-button").removeClass('active')
+			});				
     }
     if($('.js-text-btn')) {
         $('.js-text-btn').on('click', (event) => {
