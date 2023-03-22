@@ -309,12 +309,17 @@
         }
 
         &-svg {
-            width: 20px;
-            height: 20px;
+            width: 40px;
+						display: flex;
+						justify-content: center;
+						align-items: center;
+            height: 40px;
             &.noActive {
 							display: none;
 						}
             svg {
+							  width: 20px;
+							  height: 20px;
                 stroke: $blue-4c;
                 transition: $animation;
             }
