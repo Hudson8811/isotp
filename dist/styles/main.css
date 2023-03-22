@@ -1015,16 +1015,20 @@ img {
 }
 
 .header__search-button {
-  width: 20px;
-  height: 20px;
+  width: 40px;
+  justify-content: flex-end;
+  align-items: center;
+  height: 40px;
   display: none;
 }
 
 .header__search-button.active {
-  display: inline-block;
+  display: flex;
 }
 
 .header__search-button svg {
+  width: 20px;
+  height: 20px;
   stroke: #4C70B5;
   transition: all 0.5s ease;
 }
