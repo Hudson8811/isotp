@@ -995,7 +995,14 @@
         width: 100%;
         white-space: nowrap;
         overflow: hidden;
-        
+				pointer-events: none;
+				cursor: default;
+				.swiper-wrapper {
+					-webkit-transition-timing-function:linear!important; 
+					-o-transition-timing-function:linear!important;
+					transition-timing-function:linear!important; 
+				}
+								
         @include max(xs) {
             flex-direction: column;
         }
@@ -1012,9 +1019,138 @@
         background-color: $white;
         padding: 55px;
         margin: 0 12px;
-        -webkit-animation: scroll 5s infinite linear;
-        -moz-animation: scroll 5s infinite linear;
-        animation: scroll 5s infinite linear;
+				pointer-events: none;
+				cursor: default;
+				opacity: 0.6;
+				@media (max-width: 375px) {
+					opacity: 1 !important;
+				}
+				transition: all 1s;
+				// &.swiper-slide-prev {
+				// 	opacity: 1;
+				// }
+				// &.swiper-slide-next {
+				// 	opacity: 1;
+				// }
+				&.swiper-slide-active {
+					transition: all 1s;
+					opacity: 1;
+				}
+				&.swiper-slide-active + div{
+					transition: all 1s;
+					opacity: 1;
+					@media (max-width: 576px) {
+						opacity: 0.6;
+					}
+				}
+				&.swiper-slide-active + div + div{
+					transition: all 1s;
+					opacity: 1;
+					@media (max-width: 767px) {
+						opacity: 0.6;
+					}
+				}
+				&.swiper-slide-active + div + div + div{
+					transition: all 1s;
+					opacity: 1;
+					@media (max-width: 1440px) {
+						opacity: 0.6;
+					}
+				}
+				&.swiper-slide-active + div + div + div + div{
+					transition: all 1s;
+					opacity: 1;
+					@media (max-width: 1440px) {
+						opacity: 0.6;
+					}
+				}
+				&.swiper-slide-active + div + div + div + div + div{
+					transition: all 1s;
+					opacity: 1;
+					@media (max-width: 1900px) {
+						opacity: 0.6;
+					}
+				}
+				&.swiper-slide-active + div + div + div + div + div + div{
+					transition: all 1s;
+					opacity: 1;
+					@media (max-width: 2560px) {
+						opacity: 0.6;
+					}
+				}
+				&.swiper-slide-active + div + div + div + div + div + div + div{
+					transition: all 1s;
+					opacity: 1;
+					@media (max-width: 2560px) {
+						opacity: 0.6;
+					}
+				}
+				&.swiper-slide-active + div + div + div + div + div + div + div + div{
+					transition: all 1s;
+					opacity: 1;
+					@media (max-width: 3200px) {
+						opacity: 0.6;
+					}
+				}
+				&.swiper-slide-active + div + div + div + div + div + div + div + div + div{
+					transition: all 1s;
+					opacity: 1;
+					@media (max-width: 3500px) {
+						opacity: 0.6;
+					}
+				}
+				&.swiper-slide-active + div + div + div + div + div + div + div + div + div + div{
+					transition: all 1s;
+					opacity: 1;
+					@media (max-width: 3700px) {
+						opacity: 0.6;
+					}
+				}
+				&.swiper-slide-active + div + div + div + div + div + div + div + div + div + div + div{
+					transition: all 1s;
+					opacity: 1;
+					@media (max-width: 3700px) {
+						opacity: 0.6;
+					}
+				}
+				&.swiper-slide-active + div + div + div + div + div + div + div + div + div + div + div + div{
+					transition: all 1s;
+					opacity: 1;
+					@media (max-width: 4200px) {
+						opacity: 0.6;
+					}
+				}
+				&.swiper-slide-active + div + div + div + div + div + div + div + div + div + div + div + div + div{
+					transition: all 1s;
+					opacity: 1;
+					@media (max-width: 4400px) {
+						opacity: 0.6;
+					}
+				}
+				&.swiper-slide-active + div + div + div + div + div + div + div + div + div + div + div + div + div + div{
+					transition: all 1s;
+					opacity: 1;
+					@media (max-width: 4600px) {
+						opacity: 0.6;
+					}
+				}
+				&.swiper-slide-active + div + div + div + div + div + div + div + div + div + div + div + div + div + div{
+					transition: all 1s;
+					opacity: 1;
+					@media (max-width: 4600px) {
+						opacity: 0.6;
+					}
+				}
+				&.swiper-slide-active + div + div + div + div + div + div + div + div + div + div + div + div + div + div + div{
+					transition: all 1s;
+					opacity: 1;
+					@media (max-width: 5000px) {
+						opacity: 0.6;
+					}
+				}
+        // -webkit-animation: scroll 5s infinite linear;
+        // -moz-animation: scroll 5s infinite linear;
+        // animation: scroll 5s infinite linear;
         
         @include max(md) {
             max-width: 219px;
@@ -1029,48 +1165,22 @@
         @include max(xs) {
             max-width: 100%;
             border-radius: 24px;
-            -webkit-animation: none;
-            -moz-animation: none;
-            animation: none;
+            // -webkit-animation: none;
+            // -moz-animation: none;
             margin: 0;
         }
     }
 
-    @-webkit-keyframes scroll {
-        0% {
-            -webkit-transform: translate(0, 0);
-            transform: translate(0, 0);
-        }
-        100% {
-            -webkit-transform: translate(-100%, 0);
-            transform: translate(-100%, 0)
-        }
-    }
-     
-    @-moz-keyframes scroll {
-        0% {
-            -moz-transform: translate(0, 0);
-            transform: translate(0, 0);
-        }
-        100% {
-            -moz-transform: translate(-100%, 0);
-            transform: translate(-100%, 0)
-        }
-    }
-     
-    @keyframes scroll {
-        0% {
-            transform: translate(0, 0);
-        }
-        100% {
-            transform: translate(-100%, 0)
-        }
-    }
 }
 
 .reviews {
     background-color: $blue-f1f4;
-
+		.reviews__list.swiper {
+			overflow: inherit !important;
+			.swiper-container {
+				overflow: inherit !important;
+			}
+		}
     .section__container-right {
         @include max(sm) {
             padding: 25px 0 32px 16px;

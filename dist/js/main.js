@@ -11,6 +11,10 @@
 __webpack_require__.r(__webpack_exports__);
 /* harmony import */ var jquery__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! jquery */ "./node_modules/jquery/dist/jquery.js");
 /* harmony import */ var jquery__WEBPACK_IMPORTED_MODULE_0___default = /*#__PURE__*/__webpack_require__.n(jquery__WEBPACK_IMPORTED_MODULE_0__);
+function _typeof(obj) { "@babel/helpers - typeof"; return _typeof = "function" == typeof Symbol && "symbol" == typeof Symbol.iterator ? function (obj) { return typeof obj; } : function (obj) { return obj && "function" == typeof Symbol && obj.constructor === Symbol && obj !== Symbol.prototype ? "symbol" : typeof obj; }, _typeof(obj); }
+function _defineProperty(obj, key, value) { key = _toPropertyKey(key); if (key in obj) { Object.defineProperty(obj, key, { value: value, enumerable: true, configurable: true, writable: true }); } else { obj[key] = value; } return obj; }
+function _toPropertyKey(arg) { var key = _toPrimitive(arg, "string"); return _typeof(key) === "symbol" ? key : String(key); }
+function _toPrimitive(input, hint) { if (_typeof(input) !== "object" || input === null) return input; var prim = input[Symbol.toPrimitive]; if (prim !== undefined) { var res = prim.call(input, hint || "default"); if (_typeof(res) !== "object") return res; throw new TypeError("@@toPrimitive must return a primitive value."); } return (hint === "string" ? String : Number)(input); }
 
 jquery__WEBPACK_IMPORTED_MODULE_0___default()(document).ready(function () {
   if (jquery__WEBPACK_IMPORTED_MODULE_0___default()('header')) {
@@ -318,33 +322,69 @@ if (document.querySelector('.workers')) {
   });
 }
 if (document.querySelector('.clients__list')) {
-  var slider = document.querySelector('.clients__list');
-  var yourSlider;
-  var sliderInit = function sliderInit() {
-    yourSlider = new Swiper(slider, {
-      direction: 'horizontal',
-      loop: false,
-      slidesPerView: 1.108,
+  var _Swiper;
+  var swiperClientlist = new Swiper('.clients__list', (_Swiper = {
+    loop: true,
+    freeMode: true,
+    spaceBetween: 0,
+    grabCursor: true,
+    slidesPerView: "1"
+  }, _defineProperty(_Swiper, "loop", true), _defineProperty(_Swiper, "autoplay", {
+    delay: 0,
+    disableOnInteraction: true
+  }), _defineProperty(_Swiper, "breakpoints", {
+    320: {
       spaceBetween: 8,
-      slidesOffsetAfter: 16,
-      slidesOffsetBefore: 16,
-      pagination: {
-        el: ".swiper-pagination",
-        clickable: true
-      }
-    });
-  };
-  var resizeHandlerSlider = function resizeHandlerSlider() {
-    if (document.body.clientWidth <= 499) {
-      if (yourSlider) {
-        yourSlider.destroy();
-      }
-      sliderInit();
+      slidesPerView: "auto"
     }
-  };
-  resizeHandlerSlider();
-  window.addEventListener('resize', resizeHandlerSlider);
+  }), _defineProperty(_Swiper, "freeMode", true), _defineProperty(_Swiper, "speed", 5000), _defineProperty(_Swiper, "freeModeMomentum", false), _Swiper));
+  var wrapper = document.querySelector(".clients__list .swiper-wrapper");
+  var transformValue;
+  wrapper.addEventListener("mouseenter", function (event) {
+    swiperClientlist.autoplay.stop();
+    transformValue = wrapper.style.transform;
+    wrapper.style.transitionDuration = "0ms";
+    wrapper.style.transform = "translate3d(" + swiperClientlist.getTranslate() + "px, 0px, 0px)";
+  });
+  wrapper.addEventListener("mouseleave", function (event) {
+    wrapper.style.transitionDuration = swiperClientlist.params.speed + "ms";
+    wrapper.style.transform = transformValue;
+    swiperClientlist.autoplay.start();
+  });
+
+  // const slider = document.querySelector('.clients__list');
+  // let yourSlider;
+
+  // const sliderInit = () => {
+  //     yourSlider = new Swiper(slider, {
+  //         direction: 'horizontal',
+  //         loop: false,
+  //         slidesPerView: 1.108,
+  //         spaceBetween: 8,
+  //         slidesOffsetAfter: 16,
+  //         slidesOffsetBefore: 16,
+  //         pagination: {
+  //             el: ".swiper-pagination",
+  //             clickable: true,
+  //         },
+  //     })
+  // }
+
+  // const resizeHandlerSlider = () => {
+  //     if (document.body.clientWidth <= 499) {
+
+  //         if (yourSlider) {
+  //             yourSlider.destroy();
+  //         }
+
+  //         sliderInit();
+  //     }
+  // }
+
+  // resizeHandlerSlider();
+  // window.addEventListener('resize', resizeHandlerSlider);
 }
+
 if (document.querySelector('.examples__list')) {
   var swiperExamples = new Swiper('.examples__list', {
     direction: 'horizontal',

@@ -1917,6 +1917,14 @@ img {
   width: 100%;
   white-space: nowrap;
   overflow: hidden;
+  pointer-events: none;
+  cursor: default;
+}
+
+.clients__list .swiper-wrapper {
+  -webkit-transition-timing-function: linear !important;
+  -o-transition-timing-function: linear !important;
+  transition-timing-function: linear !important;
 }
 
 .clients__item {
@@ -1930,47 +1938,107 @@ img {
   background-color: #FFFFFF;
   padding: 55px;
   margin: 0 12px;
-  -webkit-animation: scroll 5s infinite linear;
-  -moz-animation: scroll 5s infinite linear;
-  animation: scroll 5s infinite linear;
+  pointer-events: none;
+  cursor: default;
+  opacity: 0.6;
+  transition: all 1s;
 }
 
-@-webkit-keyframes scroll {
-  0% {
-    -webkit-transform: translate(0, 0);
-    transform: translate(0, 0);
-  }
-
-  100% {
-    -webkit-transform: translate(-100%, 0);
-    transform: translate(-100%, 0);
-  }
+.clients__item.swiper-slide-active {
+  transition: all 1s;
+  opacity: 1;
 }
 
-@-moz-keyframes scroll {
-  0% {
-    -moz-transform: translate(0, 0);
-    transform: translate(0, 0);
-  }
-
-  100% {
-    -moz-transform: translate(-100%, 0);
-    transform: translate(-100%, 0);
-  }
+.clients__item.swiper-slide-active + div {
+  transition: all 1s;
+  opacity: 1;
 }
 
-@keyframes scroll {
-  0% {
-    transform: translate(0, 0);
-  }
+.clients__item.swiper-slide-active + div + div {
+  transition: all 1s;
+  opacity: 1;
+}
 
-  100% {
-    transform: translate(-100%, 0);
-  }
+.clients__item.swiper-slide-active + div + div + div {
+  transition: all 1s;
+  opacity: 1;
+}
+
+.clients__item.swiper-slide-active + div + div + div + div {
+  transition: all 1s;
+  opacity: 1;
+}
+
+.clients__item.swiper-slide-active + div + div + div + div + div {
+  transition: all 1s;
+  opacity: 1;
+}
+
+.clients__item.swiper-slide-active + div + div + div + div + div + div {
+  transition: all 1s;
+  opacity: 1;
+}
+
+.clients__item.swiper-slide-active + div + div + div + div + div + div + div {
+  transition: all 1s;
+  opacity: 1;
+}
+
+.clients__item.swiper-slide-active + div + div + div + div + div + div + div + div {
+  transition: all 1s;
+  opacity: 1;
+}
+
+.clients__item.swiper-slide-active + div + div + div + div + div + div + div + div + div {
+  transition: all 1s;
+  opacity: 1;
+}
+
+.clients__item.swiper-slide-active + div + div + div + div + div + div + div + div + div + div {
+  transition: all 1s;
+  opacity: 1;
+}
+
+.clients__item.swiper-slide-active + div + div + div + div + div + div + div + div + div + div + div {
+  transition: all 1s;
+  opacity: 1;
+}
+
+.clients__item.swiper-slide-active + div + div + div + div + div + div + div + div + div + div + div + div {
+  transition: all 1s;
+  opacity: 1;
+}
+
+.clients__item.swiper-slide-active + div + div + div + div + div + div + div + div + div + div + div + div + div {
+  transition: all 1s;
+  opacity: 1;
+}
+
+.clients__item.swiper-slide-active + div + div + div + div + div + div + div + div + div + div + div + div + div + div {
+  transition: all 1s;
+  opacity: 1;
+}
+
+.clients__item.swiper-slide-active + div + div + div + div + div + div + div + div + div + div + div + div + div + div {
+  transition: all 1s;
+  opacity: 1;
+}
+
+.clients__item.swiper-slide-active + div + div + div + div + div + div + div + div + div + div + div + div + div + div + div {
+  transition: all 1s;
+  opacity: 1;
 }
 
 .reviews {
   background-color: #F1F4FA;
+}
+
+.reviews .reviews__list.swiper {
+  overflow: inherit !important;
+}
+
+.reviews .reviews__list.swiper .swiper-container {
+  overflow: inherit !important;
 }
 
 .reviews__arrows {
@@ -2175,6 +2243,82 @@ img {
 
 .main-page .section__banner {
   background-color: #2A4882;
+}
+
+@media (max-width: 5000px) {
+  .clients__item.swiper-slide-active + div + div + div + div + div + div + div + div + div + div + div + div + div + div + div {
+    opacity: 0.6;
+  }
+}
+
+@media (max-width: 4600px) {
+  .clients__item.swiper-slide-active + div + div + div + div + div + div + div + div + div + div + div + div + div + div {
+    opacity: 0.6;
+  }
+
+  .clients__item.swiper-slide-active + div + div + div + div + div + div + div + div + div + div + div + div + div + div {
+    opacity: 0.6;
+  }
+}
+
+@media (max-width: 4400px) {
+  .clients__item.swiper-slide-active + div + div + div + div + div + div + div + div + div + div + div + div + div {
+    opacity: 0.6;
+  }
+}
+
+@media (max-width: 4200px) {
+  .clients__item.swiper-slide-active + div + div + div + div + div + div + div + div + div + div + div + div {
+    opacity: 0.6;
+  }
+}
+
+@media (max-width: 3700px) {
+  .clients__item.swiper-slide-active + div + div + div + div + div + div + div + div + div + div {
+    opacity: 0.6;
+  }
+
+  .clients__item.swiper-slide-active + div + div + div + div + div + div + div + div + div + div + div {
+    opacity: 0.6;
+  }
+}
+
+@media (max-width: 3500px) {
+  .clients__item.swiper-slide-active + div + div + div + div + div + div + div + div + div {
+    opacity: 0.6;
+  }
+}
+
+@media (max-width: 3200px) {
+  .clients__item.swiper-slide-active + div + div + div + div + div + div + div + div {
+    opacity: 0.6;
+  }
+}
+
+@media (max-width: 2560px) {
+  .clients__item.swiper-slide-active + div + div + div + div + div + div {
+    opacity: 0.6;
+  }
+
+  .clients__item.swiper-slide-active + div + div + div + div + div + div + div {
+    opacity: 0.6;
+  }
+}
+
+@media (max-width: 1900px) {
+  .clients__item.swiper-slide-active + div + div + div + div + div {
+    opacity: 0.6;
+  }
+}
+
+@media (max-width: 1440px) {
+  .clients__item.swiper-slide-active + div + div + div {
+    opacity: 0.6;
+  }
+
+  .clients__item.swiper-slide-active + div + div + div + div {
+    opacity: 0.6;
+  }
 }
 
 @media only screen and (max-width: 1360px) {
@@ -2805,6 +2949,12 @@ img {
   }
 }
 
+@media (max-width: 767px) {
+  .clients__item.swiper-slide-active + div + div {
+    opacity: 0.6;
+  }
+}
+
 @media only screen and (max-width: 699px) {
   .section__title {
     margin-bottom: 16px;
@@ -3075,6 +3225,12 @@ img {
   }
 }
 
+@media (max-width: 576px) {
+  .clients__item.swiper-slide-active + div {
+    opacity: 0.6;
+  }
+}
+
 @media only screen and (max-width: 499px) {
   .footer__menu {
     flex-direction: column;
@@ -3146,10 +3302,13 @@ img {
   .clients__item {
     max-width: 100%;
     border-radius: 24px;
-    -webkit-animation: none;
-    -moz-animation: none;
-    animation: none;
     margin: 0;
+  }
+}
+
+@media (max-width: 375px) {
+  .clients__item {
+    opacity: 1 !important;
   }
 }
 /*# sourceMappingURL=maps/main.css.map */
